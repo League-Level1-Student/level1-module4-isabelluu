@@ -57,7 +57,7 @@ public class Jeopardy implements ActionListener {
 			frame.setName("Jeopardy");
 		// 3. Create a JPanel variable to hold the header using the createHeader method
 			JPanel panel = new JPanel();
-			panel = createHeader("Current Music");
+			panel = createHeader("History");
 		// 4. Add the header component to the quizPanel
 			quizPanel.add(panel);
 		// 5. Add the quizPanel to the frame
@@ -128,32 +128,26 @@ public class Jeopardy implements ActionListener {
 		if(buttonPressed == firstButton)
 		{
 			// Call the askQuestion() method
-			askQuestion("1","A", 100);
+			askQuestion("What is always coming, but never arrives?","Tomorrow", 100);
 		}
 		// Complete the code in the askQuestion() method. When you play the game, the score should change.
-		
-		if(buttonPressed == firstButton)
-		{
-			// Call the askQuestion() method
-			askQuestion("1","A", 100);
-		}
 		
 		if(buttonPressed == secondButton)
 		{
 			// Call the askQuestion() method
-			askQuestion("2","A", 200);
+			askQuestion("How many oceans are there in the world?","5", 200);
 		}
 		
 		if(buttonPressed == thirdButton)
 		{
 			// Call the askQuestion() method
-			askQuestion("3","A", 300);
+			askQuestion("How tall are men's hurdles in the 110?","42 inches", 300);
 		}
 		
 		if(buttonPressed == fourthButton)
 		{
 			// Call the askQuestion() method
-			askQuestion("4","A", 400);
+			askQuestion("Who is set to be president after the vice president?","Speaker of the House", 400);
 		}
 		
 	
@@ -189,7 +183,7 @@ public class Jeopardy implements ActionListener {
 		{
 			score -= prizeMoney;
 			JOptionPane.showMessageDialog(null, "Incorrect!");
-			
+			JOptionPane.showMessageDialog(null, "The correct answer is " + correctAnswer);
 		}
 			// Pop up a message to tell the user they were wrong and give them the correct answer
 				
