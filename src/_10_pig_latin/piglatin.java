@@ -1,27 +1,29 @@
-package _09_latest_tweet;
+package _10_pig_latin;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class Twitter implements ActionListener {
+public class piglatin implements ActionListener {
 	
 	private JFrame frame;
 	private JPanel panel;
 	private JButton button;
-	private JTextField text;
+	private JTextField text, text2;
+	private JLabel label;
+	String word;
 	
-	public static void main(String[] args) {
+	void main()
+	{
+		piglatin pig = new piglatin();
+		pig.frame();
 		
-		Twitter twitter = new Twitter();
-		
-		twitter.frame();
-		
-		
+		PigLatinTranslator Pig = new PigLatinTranslator();
 		
 	}
 	
@@ -29,32 +31,42 @@ public class Twitter implements ActionListener {
 	{
 		frame = new JFrame();
 		panel = new JPanel();
-		button = new JButton("Search");
+		button = new JButton("Translate");
 		text = new JTextField();
+		text2 = new JTextField();
 		
-		
-		frame.resize(400, 80);
-		
-		text.setColumns(12);
 		panel.add(text);
 		panel.add(button);
+		panel.add(text2);
+		
 		frame.add(panel);
 		
-		button.addActionListener(this);
+		frame.resize(500, 100);
 		
 		frame.show(true);
+		
+		button.addActionListener(this);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		word = text.getText();
 		
-		System.out.println(text);
-		
+	JLabel label = new JLabel();
+	
+	label.setText(word);
+	
+	frame.add(label);
+	
 	}
-
 	
 
 
+
+	
+	
+	
+	
 }
 
