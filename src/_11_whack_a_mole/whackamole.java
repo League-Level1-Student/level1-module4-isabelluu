@@ -1,12 +1,14 @@
 package _11_whack_a_mole;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class whackamole {
+public class whackamole implements ActionListener {
 
 	private JFrame frame;
 	private JPanel panel;
@@ -61,20 +63,18 @@ public class whackamole {
 		
 		drawbuttons(number);
 		
-		for(int x = 0; x<15; x++)
-		{
-		if(x == number)
-		{
-			
-		}
-			
-		}
-		
+		button.addActionListener(this);
 	}
 	
 	void drawbuttons(int num)
 	{
 		System.out.println(num);
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
 		
 	}
 }
