@@ -38,7 +38,6 @@ public class calculator implements ActionListener {
 		
 		frame.add(panel);
 		
-		
 		frame.show(true);
 		
 		
@@ -67,6 +66,7 @@ public class calculator implements ActionListener {
 		div.addActionListener(this);
 		
 		panel.add(label);
+	
 	}
 
 
